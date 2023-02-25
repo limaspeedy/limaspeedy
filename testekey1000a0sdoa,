@@ -1,0 +1,3 @@
+Key = "TESTETMNC"
+Link = "https://1.kelprepl.repl.co/getkey/OopssHub"
+loadstring(game:HttpGet("https://raw.githubusercontent.com/OopssSorry/FreeKeySystem/main/Lib.lua"))().Sus(Link,Script,Key)
