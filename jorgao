@@ -1220,7 +1220,7 @@ local function createScroller(Parent)
 	--Properties:
 
 	Scroller.Name = "Scroller"
-	Scroller.Parent = Parent
+	Scroller.Parent = Parent.ScrollingFrame
 	Scroller.BackgroundColor3 = Color3.fromRGB(126, 126, 126)
 	Scroller.Position = UDim2.new(0.598398924, 0, 0.249713555, 0)
 	Scroller.Size = UDim2.new(0.380356163, 0, 0.64679116, 0)
@@ -1240,7 +1240,7 @@ local function createScroller(Parent)
 	UIListLayout.Padding = UDim.new(9.99999975e-05, 0)
 
 	ButtonSelected.Name = "ButtonSelected"
-	ButtonSelected.Parent = Parent
+	ButtonSelected.Parent = Parent.ScrollingFrame
 	ButtonSelected.BackgroundColor3 = Color3.fromRGB(126, 126, 126)
 	ButtonSelected.Position = UDim2.new(0.598398924, 0, 0.920627594, 0)
 	ButtonSelected.Size = UDim2.new(0.380356163, 0, 0.056865342, 0)
@@ -1260,7 +1260,7 @@ local function createScroller(Parent)
 	NameButton.TextWrapped = true
 
 	Seacher.Name = "Seacher"
-	Seacher.Parent = Parent
+	Seacher.Parent = Parent.ScrollingFrame
 	Seacher.BackgroundColor3 = Color3.fromRGB(126, 126, 126)
 	Seacher.Position = UDim2.new(0.37650618, 0, 0.0944861472, 0)
 	Seacher.Size = UDim2.new(0.602248847, 0, 0.103495322, 0)
