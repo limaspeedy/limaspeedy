@@ -1,0 +1,1486 @@
+local module = {}
+
+-- Gui to Lua
+-- Version: 3.2
+
+-- Instances:
+
+local global = Instance.new("ScreenGui")
+local Frame = Instance.new("Frame")
+local UICorner = Instance.new("UICorner")
+local LE = Instance.new("Frame")
+local UICorner_2 = Instance.new("UICorner")
+local Logo = Instance.new("TextLabel")
+local UICorner_3 = Instance.new("UICorner")
+local HUB = Instance.new("TextLabel")
+local UIGradient1 = Instance.new("UIGradient")
+local GameName = Instance.new("TextLabel")
+local UIGradient2 = Instance.new("UIGradient")
+local HubVersion = Instance.new("TextLabel")
+local UIGradient3 = Instance.new("UIGradient")
+local GButtons = Instance.new("ScrollingFrame")
+local _1Home = Instance.new("TextButton")
+local UICorner_4 = Instance.new("UICorner")
+local _998Settings = Instance.new("TextButton")
+local UICorner_5 = Instance.new("UICorner")
+local _999UpdateNotes = Instance.new("TextButton")
+local UICorner_6 = Instance.new("UICorner")
+local UIListLayout = Instance.new("UIListLayout")
+local SettingsUI = Instance.new("Frame")
+local UICorner_7 = Instance.new("UICorner")
+local SettingsTxt = Instance.new("TextLabel")
+local IDK = Instance.new("Frame")
+local UICorner_8 = Instance.new("UICorner")
+local TextBox = Instance.new("TextBox")
+local UICorner_9 = Instance.new("UICorner")
+local TextLabel = Instance.new("TextLabel")
+local TextLabel_2 = Instance.new("TextLabel")
+local ActiveToogleTxt = Instance.new("TextButton")
+local UICorner_10 = Instance.new("UICorner")
+local IDK_2 = Instance.new("Frame")
+local UICorner_11 = Instance.new("UICorner")
+local AntAFKButton = Instance.new("TextButton")
+local UICorner_12 = Instance.new("UICorner")
+local TextLabel_3 = Instance.new("TextLabel")
+local TextLabel_4 = Instance.new("TextLabel")
+local AntiAFKFrameColor = Instance.new("Frame")
+local UICorner_13 = Instance.new("UICorner")
+local IDK_3 = Instance.new("Frame")
+local UICorner_14 = Instance.new("UICorner")
+local DeleteButton = Instance.new("TextButton")
+local UICorner_15 = Instance.new("UICorner")
+local TextLabel_5 = Instance.new("TextLabel")
+local TextLabel_6 = Instance.new("TextLabel")
+local DeleteButtonFrameColor = Instance.new("Frame")
+local UICorner_16 = Instance.new("UICorner")
+local IDK_4 = Instance.new("Frame")
+local UICorner_17 = Instance.new("UICorner")
+local SaveButton = Instance.new("TextButton")
+local UICorner_18 = Instance.new("UICorner")
+local TextLabel_7 = Instance.new("TextLabel")
+local TextLabel_8 = Instance.new("TextLabel")
+local SaveFrameColor = Instance.new("Frame")
+local UICorner_19 = Instance.new("UICorner")
+local ResetSaveButton = Instance.new("TextButton")
+local UICorner_20 = Instance.new("UICorner")
+local Warn = Instance.new("Frame")
+local UICorner_21 = Instance.new("UICorner")
+local Dwarn = Instance.new("Frame")
+local UICorner_22 = Instance.new("UICorner")
+local Frame_2 = Instance.new("Frame")
+local UICorner_23 = Instance.new("UICorner")
+local Yes = Instance.new("TextButton")
+local UICorner_24 = Instance.new("UICorner")
+local No = Instance.new("TextButton")
+local UICorner_25 = Instance.new("UICorner")
+local TextLabel_9 = Instance.new("TextLabel")
+local TextLabel_10 = Instance.new("TextLabel")
+local Wwarn = Instance.new("Frame")
+local UICorner_26 = Instance.new("UICorner")
+local Frame_3 = Instance.new("Frame")
+local UICorner_27 = Instance.new("UICorner")
+local Okay = Instance.new("TextButton")
+local UICorner_28 = Instance.new("UICorner")
+local TextLabel_11 = Instance.new("TextLabel")
+local TextLabel_12 = Instance.new("TextLabel")
+local Swarn = Instance.new("Frame")
+local UICorner_29 = Instance.new("UICorner")
+local Frame_4 = Instance.new("Frame")
+local UICorner_30 = Instance.new("UICorner")
+local Okay_2 = Instance.new("TextButton")
+local UICorner_31 = Instance.new("UICorner")
+local TextLabel_13 = Instance.new("TextLabel")
+local TextLabel_14 = Instance.new("TextLabel")
+local Bwarn = Instance.new("Frame")
+local UICorner_32 = Instance.new("UICorner")
+local Frame_5 = Instance.new("Frame")
+local UICorner_33 = Instance.new("UICorner")
+local Okay_3 = Instance.new("TextButton")
+local UICorner_34 = Instance.new("UICorner")
+local TextLabel_15 = Instance.new("TextLabel")
+local TextLabel_16 = Instance.new("TextLabel")
+local TextLabel_17 = Instance.new("TextLabel")
+local HomeUi = Instance.new("Frame")
+local UICorner_35 = Instance.new("UICorner")
+local Credits = Instance.new("TextLabel")
+local YTDC = Instance.new("TextLabel")
+local TextCredits = Instance.new("TextLabel")
+local Frame_6 = Instance.new("Frame")
+local UICorner_36 = Instance.new("UICorner")
+local ImageLabelYT = Instance.new("ImageLabel")
+local UICorner_37 = Instance.new("UICorner")
+local NameChannel = Instance.new("TextLabel")
+local NameChannel_2 = Instance.new("TextLabel")
+local ImageLabelDC = Instance.new("ImageLabel")
+local UICorner_38 = Instance.new("UICorner")
+local NameDC = Instance.new("TextLabel")
+local TextButtonDC = Instance.new("TextButton")
+local UICorner_39 = Instance.new("UICorner")
+local TextButtonYT = Instance.new("TextButton")
+local UICorner_40 = Instance.new("UICorner")
+local UpdateNoteUi = Instance.new("Frame")
+local UICorner_41 = Instance.new("UICorner")
+local UpdatesTXT = Instance.new("TextLabel")
+local UpdatesVTXT = Instance.new("TextLabel")
+local TextUpdates = Instance.new("TextLabel")
+local MenuH = Instance.new("Frame")
+local TextButton = Instance.new("TextButton")
+local UICorner_42 = Instance.new("UICorner")
+local TextLabel_18 = Instance.new("TextLabel")
+
+--Properties:
+
+global.Name = "LDSHUB"
+global.Parent = game.CoreGui
+global.Enabled = false
+global.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+global.ResetOnSpawn = false
+
+Frame.Parent = global
+Frame.BackgroundColor3 = Color3.fromRGB(27, 27, 27)
+Frame.Position = UDim2.new(0.313664556, 0, 0.321052641, 0)
+Frame.Size = UDim2.new(0.372049779, 0, 0.357894748, 0)
+
+UICorner.Parent = Frame
+
+LE.Name = "LE"
+LE.Parent = Frame
+LE.BackgroundColor3 = Color3.fromRGB(38, 38, 38)
+LE.Position = UDim2.new(-0.00166725798, 0, 0, 0)
+LE.Size = UDim2.new(0.263566554, 0, 1.00000012, 0)
+
+UICorner_2.Parent = LE
+
+Logo.Name = "Logo"
+Logo.Parent = LE
+Logo.BackgroundColor3 = Color3.fromRGB(170, 0, 255)
+Logo.Position = UDim2.new(0.0950112194, 0, 0.0441176444, 0)
+Logo.Size = UDim2.new(0.285033107, 0, 0.132352933, 0)
+Logo.Font = Enum.Font.SciFi
+Logo.Text = "LDS"
+Logo.TextColor3 = Color3.fromRGB(255, 255, 255)
+Logo.TextScaled = true
+Logo.TextSize = 20.000
+Logo.TextWrapped = true
+
+UICorner_3.CornerRadius = UDim.new(0, 99999999)
+UICorner_3.Parent = Logo
+
+HUB.Name = "HUB"
+HUB.Parent = Logo
+HUB.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+HUB.BackgroundTransparency = 1.000
+HUB.Position = UDim2.new(1, 0, 0, 0)
+HUB.Size = UDim2.new(2.08888888, 0, 1, 0)
+HUB.Font = Enum.Font.SciFi
+HUB.Text = "HUB"
+HUB.TextColor3 = Color3.fromRGB(255, 255, 255)
+HUB.TextScaled = true
+HUB.TextSize = 14.000
+HUB.TextWrapped = true
+
+UIGradient1.Color = ColorSequence.new{ColorSequenceKeypoint.new(0.00, Color3.fromRGB(170, 0, 255)), ColorSequenceKeypoint.new(1.00, Color3.fromRGB(255, 85, 255))}
+UIGradient1.Name = "UIGradient1"
+UIGradient1.Parent = HUB
+
+GameName.Name = "GameName"
+GameName.Parent = Logo
+GameName.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+GameName.BackgroundTransparency = 1.000
+GameName.Position = UDim2.new(-0.245627195, 0, 6.01015091, 0)
+GameName.Size = UDim2.new(3.29029179, 0, 0.647635043, 0)
+GameName.Font = Enum.Font.SciFi
+GameName.Text = "Game Name"
+GameName.TextColor3 = Color3.fromRGB(255, 255, 255)
+GameName.TextScaled = true
+GameName.TextSize = 14.000
+GameName.TextWrapped = true
+
+UIGradient2.Color = ColorSequence.new{ColorSequenceKeypoint.new(0.00, Color3.fromRGB(170, 85, 255)), ColorSequenceKeypoint.new(1.00, Color3.fromRGB(255, 85, 255))}
+UIGradient2.Name = "UIGradient2"
+UIGradient2.Parent = GameName
+
+HubVersion.Name = "HubVersion"
+HubVersion.Parent = Logo
+HubVersion.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+HubVersion.BackgroundTransparency = 1.000
+HubVersion.Position = UDim2.new(-0.245627195, 0, 6.64546156, 0)
+HubVersion.Size = UDim2.new(3.29029179, 0, 0.443428218, 0)
+HubVersion.Font = Enum.Font.SciFi
+HubVersion.Text = "v. 1.0 Global"
+HubVersion.TextColor3 = Color3.fromRGB(255, 255, 255)
+HubVersion.TextScaled = true
+HubVersion.TextSize = 14.000
+HubVersion.TextWrapped = true
+
+UIGradient3.Color = ColorSequence.new{ColorSequenceKeypoint.new(0.00, Color3.fromRGB(170, 85, 255)), ColorSequenceKeypoint.new(1.00, Color3.fromRGB(255, 85, 255))}
+UIGradient3.Name = "UIGradient3"
+UIGradient3.Parent = HubVersion
+
+GButtons.Name = "GButtons"
+GButtons.Parent = LE
+GButtons.Active = true
+GButtons.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+GButtons.BackgroundTransparency = 1.000
+GButtons.BorderColor3 = Color3.fromRGB(38, 38, 38)
+GButtons.Position = UDim2.new(0.0249994192, 0, 0.212000027, 0)
+GButtons.Size = UDim2.new(0.975000679, 0, 0.629705727, 0)
+GButtons.CanvasSize = UDim2.new(0, 0, 3, 0)
+GButtons.VerticalScrollBarInset = Enum.ScrollBarInset.ScrollBar
+
+_1Home.Name = "1Home"
+_1Home.Parent = GButtons
+_1Home.BackgroundColor3 = Color3.fromRGB(170, 0, 255)
+_1Home.Position = UDim2.new(-0.0751205236, 0, 0, 0)
+_1Home.Size = UDim2.new(0.943000019, 0, 0.0329999998, 0)
+_1Home.Font = Enum.Font.DenkOne
+_1Home.Text = "Home"
+_1Home.TextColor3 = Color3.fromRGB(255, 255, 255)
+_1Home.TextScaled = true
+_1Home.TextSize = 14.000
+_1Home.TextWrapped = true
+
+UICorner_4.Parent = _1Home
+
+_998Settings.Name = "998Settings"
+_998Settings.Parent = GButtons
+_998Settings.BackgroundColor3 = Color3.fromRGB(126, 126, 126)
+_998Settings.Position = UDim2.new(0.0382463485, 0, 0, 0)
+_998Settings.Size = UDim2.new(0.943000019, 0, 0.0329999998, 0)
+_998Settings.Font = Enum.Font.DenkOne
+_998Settings.Text = "Settings"
+_998Settings.TextColor3 = Color3.fromRGB(255, 255, 255)
+_998Settings.TextScaled = true
+_998Settings.TextSize = 14.000
+_998Settings.TextWrapped = true
+
+UICorner_5.Parent = _998Settings
+
+_999UpdateNotes.Name = "999UpdateNotes"
+_999UpdateNotes.Parent = GButtons
+_999UpdateNotes.BackgroundColor3 = Color3.fromRGB(126, 126, 126)
+_999UpdateNotes.Position = UDim2.new(0.0382463485, 0, 0, 0)
+_999UpdateNotes.Size = UDim2.new(0.943000019, 0, 0.0329999998, 0)
+_999UpdateNotes.Font = Enum.Font.DenkOne
+_999UpdateNotes.Text = "Update Notes"
+_999UpdateNotes.TextColor3 = Color3.fromRGB(255, 255, 255)
+_999UpdateNotes.TextScaled = true
+_999UpdateNotes.TextSize = 14.000
+_999UpdateNotes.TextWrapped = true
+
+UICorner_6.Parent = _999UpdateNotes
+
+UIListLayout.Parent = GButtons
+UIListLayout.SortOrder = Enum.SortOrder.Name
+UIListLayout.HorizontalAlignment = Enum.HorizontalAlignment.Center
+UIListLayout.Padding = UDim.new(0.00499999989, 0)
+
+SettingsUI.Name = "SettingsUI"
+SettingsUI.Parent = Frame
+SettingsUI.BackgroundColor3 = Color3.fromRGB(52, 52, 52)
+SettingsUI.Position = UDim2.new(0.273959696, 0, 0.0941176489, 0)
+SettingsUI.Size = UDim2.new(0.707664907, 0, 0.871586502, 0)
+SettingsUI.Visible = false
+
+UICorner_7.Parent = SettingsUI
+
+SettingsTxt.Name = "SettingsTxt"
+SettingsTxt.Parent = SettingsUI
+SettingsTxt.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+SettingsTxt.BackgroundTransparency = 1.000
+SettingsTxt.Position = UDim2.new(-3.46731395e-05, 0, -0.0708646849, 0)
+SettingsTxt.Size = UDim2.new(0.407053292, 0, 0.165350974, 0)
+SettingsTxt.Font = Enum.Font.Unknown
+SettingsTxt.Text = "Settings"
+SettingsTxt.TextColor3 = Color3.fromRGB(255, 255, 255)
+SettingsTxt.TextScaled = true
+SettingsTxt.TextSize = 14.000
+SettingsTxt.TextWrapped = true
+
+IDK.Name = "IDK"
+IDK.Parent = SettingsUI
+IDK.BackgroundColor3 = Color3.fromRGB(126, 126, 126)
+IDK.Position = UDim2.new(0.0164320152, 0, 0.536577582, 0)
+IDK.Size = UDim2.new(0.964788616, 0, 0.443175077, 0)
+
+UICorner_8.Parent = IDK
+
+TextBox.Parent = IDK
+TextBox.BackgroundColor3 = Color3.fromRGB(52, 52, 52)
+TextBox.Position = UDim2.new(0.153299093, 0, 0.36807552, 0)
+TextBox.Size = UDim2.new(0.695136189, 0, 0.236046121, 0)
+TextBox.Font = Enum.Font.FredokaOne
+TextBox.PlaceholderText = "\"Place here you keybind (Not Working)\""
+TextBox.Text = ""
+TextBox.TextColor3 = Color3.fromRGB(170, 0, 255)
+TextBox.TextScaled = true
+TextBox.TextSize = 14.000
+TextBox.TextWrapped = true
+
+UICorner_9.Parent = TextBox
+
+TextLabel.Parent = IDK
+TextLabel.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel.BackgroundTransparency = 1.000
+TextLabel.Position = UDim2.new(0, 0, -0.00761392713, 0)
+TextLabel.Size = UDim2.new(1, 0, 0.375689745, 0)
+TextLabel.Font = Enum.Font.SciFi
+TextLabel.Text = "If you want to change the defined key to make the HUB invisible, put the desired key in the field below!"
+TextLabel.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel.TextScaled = true
+TextLabel.TextSize = 14.000
+TextLabel.TextWrapped = true
+
+TextLabel_2.Parent = IDK
+TextLabel_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_2.BackgroundTransparency = 1.000
+TextLabel_2.Position = UDim2.new(0.220155805, 0, 0.738596737, 0)
+TextLabel_2.Size = UDim2.new(0.553439558, 0, 0.304506034, 0)
+TextLabel_2.Font = Enum.Font.SciFi
+TextLabel_2.Text = "Defined key: Right Shift"
+TextLabel_2.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_2.TextScaled = true
+TextLabel_2.TextSize = 14.000
+TextLabel_2.TextWrapped = true
+
+ActiveToogleTxt.Name = "ActiveToogleTxt"
+ActiveToogleTxt.Parent = IDK
+ActiveToogleTxt.BackgroundColor3 = Color3.fromRGB(52, 52, 52)
+ActiveToogleTxt.Position = UDim2.new(0.368758351, 0, 0.654228806, 0)
+ActiveToogleTxt.Size = UDim2.new(0.260342091, 0, 0.15990223, 0)
+ActiveToogleTxt.Font = Enum.Font.FredokaOne
+ActiveToogleTxt.Text = "Active"
+ActiveToogleTxt.TextColor3 = Color3.fromRGB(255, 255, 255)
+ActiveToogleTxt.TextScaled = true
+ActiveToogleTxt.TextSize = 14.000
+ActiveToogleTxt.TextWrapped = true
+
+UICorner_10.Parent = ActiveToogleTxt
+
+IDK_2.Name = "IDK "
+IDK_2.Parent = SettingsUI
+IDK_2.BackgroundColor3 = Color3.fromRGB(126, 126, 126)
+IDK_2.Position = UDim2.new(0.0164319985, 0, 0.134980157, 0)
+IDK_2.Size = UDim2.new(0.306447297, 0, 0.362217754, 0)
+
+UICorner_11.Parent = IDK_2
+
+AntAFKButton.Name = "AntAFKButton"
+AntAFKButton.Parent = IDK_2
+AntAFKButton.BackgroundColor3 = Color3.fromRGB(52, 52, 52)
+AntAFKButton.Position = UDim2.new(0.25792107, 0, 0.314927578, 0)
+AntAFKButton.Size = UDim2.new(0.474495292, 0, 0.307436049, 0)
+AntAFKButton.Font = Enum.Font.SourceSans
+AntAFKButton.Text = ""
+AntAFKButton.TextColor3 = Color3.fromRGB(0, 0, 0)
+AntAFKButton.TextSize = 14.000
+
+UICorner_12.Parent = AntAFKButton
+
+TextLabel_3.Parent = AntAFKButton
+TextLabel_3.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_3.BackgroundTransparency = 1.000
+TextLabel_3.Position = UDim2.new(-0.398266196, 0, -1.02436781, 0)
+TextLabel_3.Size = UDim2.new(1.77940321, 0, 1.02436817, 0)
+TextLabel_3.Font = Enum.Font.FredokaOne
+TextLabel_3.Text = "Anti AFK"
+TextLabel_3.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_3.TextScaled = true
+TextLabel_3.TextSize = 14.000
+TextLabel_3.TextWrapped = true
+
+TextLabel_4.Parent = AntAFKButton
+TextLabel_4.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_4.BackgroundTransparency = 1.000
+TextLabel_4.Position = UDim2.new(-0.543569267, 0, 1, 0)
+TextLabel_4.Size = UDim2.new(2.10750294, 0, 1.21227443, 0)
+TextLabel_4.Font = Enum.Font.FredokaOne
+TextLabel_4.Text = "When activated you will not be kicked for inactivity"
+TextLabel_4.TextColor3 = Color3.fromRGB(170, 0, 255)
+TextLabel_4.TextScaled = true
+TextLabel_4.TextSize = 14.000
+TextLabel_4.TextWrapped = true
+
+AntiAFKFrameColor.Name = "AntiAFKFrameColor"
+AntiAFKFrameColor.Parent = AntAFKButton
+AntiAFKFrameColor.BackgroundColor3 = Color3.fromRGB(255, 0, 0)
+AntiAFKFrameColor.Position = UDim2.new(0.0568263568, 0, 0.1777464, 0)
+AntiAFKFrameColor.Size = UDim2.new(0.45161289, 0, 0.696969688, 0)
+
+UICorner_13.Parent = AntiAFKFrameColor
+
+IDK_3.Name = "IDK"
+IDK_3.Parent = SettingsUI
+IDK_3.BackgroundColor3 = Color3.fromRGB(126, 126, 126)
+IDK_3.Position = UDim2.new(0.673806965, 0, 0.134980157, 0)
+IDK_3.Size = UDim2.new(0.307413667, 0, 0.362217754, 0)
+
+UICorner_14.Parent = IDK_3
+
+DeleteButton.Name = "DeleteButton"
+DeleteButton.Parent = IDK_3
+DeleteButton.BackgroundColor3 = Color3.fromRGB(52, 52, 52)
+DeleteButton.Position = UDim2.new(0.25792107, 0, 0.314927578, 0)
+DeleteButton.Size = UDim2.new(0.474495292, 0, 0.307436049, 0)
+DeleteButton.Font = Enum.Font.SourceSans
+DeleteButton.Text = ""
+DeleteButton.TextColor3 = Color3.fromRGB(0, 0, 0)
+DeleteButton.TextSize = 14.000
+
+UICorner_15.Parent = DeleteButton
+
+TextLabel_5.Parent = DeleteButton
+TextLabel_5.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_5.BackgroundTransparency = 1.000
+TextLabel_5.Position = UDim2.new(-0.398266196, 0, -0.882007003, 0)
+TextLabel_5.Size = UDim2.new(1.80090857, 0, 0.882007301, 0)
+TextLabel_5.Font = Enum.Font.FredokaOne
+TextLabel_5.Text = "Delete Hub"
+TextLabel_5.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_5.TextScaled = true
+TextLabel_5.TextSize = 14.000
+TextLabel_5.TextWrapped = true
+
+TextLabel_6.Parent = DeleteButton
+TextLabel_6.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_6.BackgroundTransparency = 1.000
+TextLabel_6.Position = UDim2.new(-0.543569267, 0, 1, 0)
+TextLabel_6.Size = UDim2.new(2.10750294, 0, 1.21227443, 0)
+TextLabel_6.Font = Enum.Font.FredokaOne
+TextLabel_6.Text = "Delete the Hub"
+TextLabel_6.TextColor3 = Color3.fromRGB(170, 0, 255)
+TextLabel_6.TextScaled = true
+TextLabel_6.TextSize = 14.000
+TextLabel_6.TextWrapped = true
+
+DeleteButtonFrameColor.Name = "DeleteButtonFrameColor"
+DeleteButtonFrameColor.Parent = DeleteButton
+DeleteButtonFrameColor.BackgroundColor3 = Color3.fromRGB(255, 0, 0)
+DeleteButtonFrameColor.Position = UDim2.new(0.0568263568, 0, 0.1777464, 0)
+DeleteButtonFrameColor.Size = UDim2.new(0.45161289, 0, 0.696969688, 0)
+
+UICorner_16.Parent = DeleteButtonFrameColor
+
+IDK_4.Name = "IDK "
+IDK_4.Parent = SettingsUI
+IDK_4.BackgroundColor3 = Color3.fromRGB(126, 126, 126)
+IDK_4.Position = UDim2.new(0.345275521, 0, 0.134980157, 0)
+IDK_4.Size = UDim2.new(0.306447297, 0, 0.362217754, 0)
+
+UICorner_17.Parent = IDK_4
+
+SaveButton.Name = "SaveButton"
+SaveButton.Parent = IDK_4
+SaveButton.BackgroundColor3 = Color3.fromRGB(52, 52, 52)
+SaveButton.Position = UDim2.new(0.25792107, 0, 0.314927578, 0)
+SaveButton.Size = UDim2.new(0.474495292, 0, 0.307436049, 0)
+SaveButton.Font = Enum.Font.SourceSans
+SaveButton.Text = ""
+SaveButton.TextColor3 = Color3.fromRGB(0, 0, 0)
+SaveButton.TextSize = 14.000
+
+UICorner_18.Parent = SaveButton
+
+TextLabel_7.Parent = SaveButton
+TextLabel_7.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_7.BackgroundTransparency = 1.000
+TextLabel_7.Position = UDim2.new(-0.398266196, 0, -1.02436781, 0)
+TextLabel_7.Size = UDim2.new(1.77940321, 0, 1.02436817, 0)
+TextLabel_7.Font = Enum.Font.FredokaOne
+TextLabel_7.Text = "Save Hub"
+TextLabel_7.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_7.TextScaled = true
+TextLabel_7.TextSize = 14.000
+TextLabel_7.TextWrapped = true
+
+TextLabel_8.Parent = SaveButton
+TextLabel_8.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_8.BackgroundTransparency = 1.000
+TextLabel_8.Position = UDim2.new(-0.543569267, 0, 0.878787875, 0)
+TextLabel_8.Size = UDim2.new(2.10750318, 0, 0.757729053, 0)
+TextLabel_8.Font = Enum.Font.FredokaOne
+TextLabel_8.Text = "Save hub settings"
+TextLabel_8.TextColor3 = Color3.fromRGB(170, 0, 255)
+TextLabel_8.TextScaled = true
+TextLabel_8.TextSize = 14.000
+TextLabel_8.TextWrapped = true
+
+SaveFrameColor.Name = "SaveFrameColor"
+SaveFrameColor.Parent = SaveButton
+SaveFrameColor.BackgroundColor3 = Color3.fromRGB(255, 0, 0)
+SaveFrameColor.Position = UDim2.new(0.0568263568, 0, 0.1777464, 0)
+SaveFrameColor.Size = UDim2.new(0.45161289, 0, 0.696969688, 0)
+
+UICorner_19.Parent = SaveFrameColor
+
+ResetSaveButton.Name = "ResetSaveButton"
+ResetSaveButton.Parent = SaveButton
+ResetSaveButton.BackgroundColor3 = Color3.fromRGB(52, 52, 52)
+ResetSaveButton.BorderColor3 = Color3.fromRGB(0, 0, 0)
+ResetSaveButton.BorderSizePixel = 0
+ResetSaveButton.Position = UDim2.new(-0.0161938183, 0, 1.63636363, 0)
+ResetSaveButton.Size = UDim2.new(0.98782289, 0, 0.575757563, 0)
+ResetSaveButton.Font = Enum.Font.FredokaOne
+ResetSaveButton.Text = "Reset Save"
+ResetSaveButton.TextColor3 = Color3.fromRGB(255, 255, 255)
+ResetSaveButton.TextScaled = true
+ResetSaveButton.TextSize = 14.000
+ResetSaveButton.TextStrokeTransparency = 0.000
+ResetSaveButton.TextWrapped = true
+
+UICorner_20.Parent = ResetSaveButton
+
+Warn.Name = "Warn"
+Warn.Parent = Frame
+Warn.BackgroundColor3 = Color3.fromRGB(56, 56, 56)
+Warn.BackgroundTransparency = 0.300
+Warn.Position = UDim2.new(-1.01579595e-07, 0, 0, 0)
+Warn.Size = UDim2.new(1.00000024, 0, 1, 0)
+Warn.Visible = false
+Warn.ZIndex = 5
+
+UICorner_21.Parent = Warn
+
+Dwarn.Name = "Dwarn"
+Dwarn.Parent = Warn
+Dwarn.BackgroundColor3 = Color3.fromRGB(27, 27, 27)
+Dwarn.Position = UDim2.new(0.168092147, 0, 0.193146184, 0)
+Dwarn.Size = UDim2.new(0.665079296, 0, 0.671559691, 0)
+Dwarn.Visible = false
+
+UICorner_22.Parent = Dwarn
+
+Frame_2.Parent = Dwarn
+Frame_2.BackgroundColor3 = Color3.fromRGB(52, 52, 52)
+Frame_2.Position = UDim2.new(0.0200190227, 0, 0.375200927, 0)
+Frame_2.Size = UDim2.new(0.959961951, 0, 0.576623321, 0)
+
+UICorner_23.Parent = Frame_2
+
+Yes.Name = "Yes"
+Yes.Parent = Frame_2
+Yes.BackgroundColor3 = Color3.fromRGB(85, 255, 127)
+Yes.Position = UDim2.new(0.552630305, 0, 0.281025678, 0)
+Yes.Size = UDim2.new(0.392323554, 0, 0.437948585, 0)
+Yes.Font = Enum.Font.SciFi
+Yes.Text = "Yes"
+Yes.TextColor3 = Color3.fromRGB(255, 255, 255)
+Yes.TextScaled = true
+Yes.TextSize = 14.000
+Yes.TextWrapped = true
+
+UICorner_24.Parent = Yes
+
+No.Name = "No"
+No.Parent = Frame_2
+No.BackgroundColor3 = Color3.fromRGB(255, 0, 0)
+No.Position = UDim2.new(0.0560000017, 0, 0.281025678, 0)
+No.Size = UDim2.new(0.392323554, 0, 0.437948585, 0)
+No.Font = Enum.Font.SciFi
+No.Text = "No"
+No.TextColor3 = Color3.fromRGB(255, 255, 255)
+No.TextScaled = true
+No.TextSize = 14.000
+No.TextWrapped = true
+
+UICorner_25.Parent = No
+
+TextLabel_9.Parent = Dwarn
+TextLabel_9.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_9.BackgroundTransparency = 1.000
+TextLabel_9.Position = UDim2.new(0.0200190227, 0, 0.15911302, 0)
+TextLabel_9.Size = UDim2.new(0.959961772, 0, 0.232730389, 0)
+TextLabel_9.Font = Enum.Font.FredokaOne
+TextLabel_9.Text = "Are you sure you want to proceed?"
+TextLabel_9.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_9.TextScaled = true
+TextLabel_9.TextSize = 14.000
+TextLabel_9.TextWrapped = true
+
+TextLabel_10.Parent = Dwarn
+TextLabel_10.BackgroundColor3 = Color3.fromRGB(170, 0, 255)
+TextLabel_10.BackgroundTransparency = 1.000
+TextLabel_10.Position = UDim2.new(0.0175166447, 0, 0.00582630653, 0)
+TextLabel_10.Size = UDim2.new(0.959961772, 0, 0.204395592, 0)
+TextLabel_10.Font = Enum.Font.FredokaOne
+TextLabel_10.Text = "(warning)"
+TextLabel_10.TextColor3 = Color3.fromRGB(170, 0, 255)
+TextLabel_10.TextScaled = true
+TextLabel_10.TextSize = 14.000
+TextLabel_10.TextWrapped = true
+
+Wwarn.Name = "Wwarn"
+Wwarn.Parent = Warn
+Wwarn.BackgroundColor3 = Color3.fromRGB(27, 27, 27)
+Wwarn.Position = UDim2.new(0.168092147, 0, 0.193146184, 0)
+Wwarn.Size = UDim2.new(0.665079296, 0, 0.671559691, 0)
+Wwarn.Visible = false
+
+UICorner_26.Parent = Wwarn
+
+Frame_3.Parent = Wwarn
+Frame_3.BackgroundColor3 = Color3.fromRGB(52, 52, 52)
+Frame_3.Position = UDim2.new(0.0200190227, 0, 0.375200927, 0)
+Frame_3.Size = UDim2.new(0.959961951, 0, 0.576623321, 0)
+
+UICorner_27.Parent = Frame_3
+
+Okay.Name = "Okay"
+Okay.Parent = Frame_3
+Okay.BackgroundColor3 = Color3.fromRGB(85, 255, 127)
+Okay.Position = UDim2.new(0.300244689, 0, 0.281025678, 0)
+Okay.Size = UDim2.new(0.392323554, 0, 0.437948585, 0)
+Okay.Font = Enum.Font.SciFi
+Okay.Text = "Okay"
+Okay.TextColor3 = Color3.fromRGB(255, 255, 255)
+Okay.TextScaled = true
+Okay.TextSize = 14.000
+Okay.TextWrapped = true
+
+UICorner_28.Parent = Okay
+
+TextLabel_11.Parent = Wwarn
+TextLabel_11.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_11.BackgroundTransparency = 1.000
+TextLabel_11.Position = UDim2.new(0.0200187974, 0, 0.201462671, 0)
+TextLabel_11.Size = UDim2.new(0.959961772, 0, 0.190380752, 0)
+TextLabel_11.Font = Enum.Font.FredokaOne
+TextLabel_11.Text = "This option is still under development!"
+TextLabel_11.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_11.TextScaled = true
+TextLabel_11.TextSize = 14.000
+TextLabel_11.TextWrapped = true
+
+TextLabel_12.Parent = Wwarn
+TextLabel_12.BackgroundColor3 = Color3.fromRGB(170, 0, 255)
+TextLabel_12.BackgroundTransparency = 1.000
+TextLabel_12.Position = UDim2.new(0.0175166447, 0, 0.00582630653, 0)
+TextLabel_12.Size = UDim2.new(0.959961772, 0, 0.204395592, 0)
+TextLabel_12.Font = Enum.Font.FredokaOne
+TextLabel_12.Text = "(warning)"
+TextLabel_12.TextColor3 = Color3.fromRGB(170, 0, 255)
+TextLabel_12.TextScaled = true
+TextLabel_12.TextSize = 14.000
+TextLabel_12.TextWrapped = true
+
+Swarn.Name = "Swarn"
+Swarn.Parent = Warn
+Swarn.BackgroundColor3 = Color3.fromRGB(27, 27, 27)
+Swarn.Position = UDim2.new(0.168092147, 0, 0.193146184, 0)
+Swarn.Size = UDim2.new(0.665079296, 0, 0.671559691, 0)
+Swarn.Visible = false
+
+UICorner_29.Parent = Swarn
+
+Frame_4.Parent = Swarn
+Frame_4.BackgroundColor3 = Color3.fromRGB(52, 52, 52)
+Frame_4.Position = UDim2.new(0.0200190227, 0, 0.375200927, 0)
+Frame_4.Size = UDim2.new(0.959961951, 0, 0.576623321, 0)
+
+UICorner_30.Parent = Frame_4
+
+Okay_2.Name = "Okay"
+Okay_2.Parent = Frame_4
+Okay_2.BackgroundColor3 = Color3.fromRGB(85, 255, 127)
+Okay_2.Position = UDim2.new(0.300244689, 0, 0.281025678, 0)
+Okay_2.Size = UDim2.new(0.392323554, 0, 0.437948585, 0)
+Okay_2.Font = Enum.Font.SciFi
+Okay_2.Text = "Okay"
+Okay_2.TextColor3 = Color3.fromRGB(255, 255, 255)
+Okay_2.TextScaled = true
+Okay_2.TextSize = 14.000
+Okay_2.TextWrapped = true
+
+UICorner_31.Parent = Okay_2
+
+TextLabel_13.Parent = Swarn
+TextLabel_13.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_13.BackgroundTransparency = 1.000
+TextLabel_13.Position = UDim2.new(0.0200187974, 0, 0.201462671, 0)
+TextLabel_13.Size = UDim2.new(0.959961772, 0, 0.190380752, 0)
+TextLabel_13.Font = Enum.Font.FredokaOne
+TextLabel_13.Text = "Activate the desired mode!"
+TextLabel_13.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_13.TextScaled = true
+TextLabel_13.TextSize = 14.000
+TextLabel_13.TextWrapped = true
+
+TextLabel_14.Parent = Swarn
+TextLabel_14.BackgroundColor3 = Color3.fromRGB(170, 0, 255)
+TextLabel_14.BackgroundTransparency = 1.000
+TextLabel_14.Position = UDim2.new(0.0175166447, 0, 0.00582630653, 0)
+TextLabel_14.Size = UDim2.new(0.959961772, 0, 0.204395592, 0)
+TextLabel_14.Font = Enum.Font.FredokaOne
+TextLabel_14.Text = "(warning)"
+TextLabel_14.TextColor3 = Color3.fromRGB(170, 0, 255)
+TextLabel_14.TextScaled = true
+TextLabel_14.TextSize = 14.000
+TextLabel_14.TextWrapped = true
+
+Bwarn.Name = "Bwarn"
+Bwarn.Parent = Warn
+Bwarn.BackgroundColor3 = Color3.fromRGB(27, 27, 27)
+Bwarn.Position = UDim2.new(0.168092147, 0, 0.193146184, 0)
+Bwarn.Size = UDim2.new(0.665079296, 0, 0.671559691, 0)
+Bwarn.Visible = false
+
+UICorner_32.Parent = Bwarn
+
+Frame_5.Parent = Bwarn
+Frame_5.BackgroundColor3 = Color3.fromRGB(52, 52, 52)
+Frame_5.Position = UDim2.new(0.0200190227, 0, 0.375200927, 0)
+Frame_5.Size = UDim2.new(0.959961951, 0, 0.576623321, 0)
+
+UICorner_33.Parent = Frame_5
+
+Okay_3.Name = "Okay"
+Okay_3.Parent = Frame_5
+Okay_3.BackgroundColor3 = Color3.fromRGB(85, 255, 127)
+Okay_3.Position = UDim2.new(0.300244689, 0, 0.0835481733, 0)
+Okay_3.Size = UDim2.new(0.392323554, 0, 0.437948585, 0)
+Okay_3.Font = Enum.Font.SciFi
+Okay_3.Text = "Done!!"
+Okay_3.TextColor3 = Color3.fromRGB(255, 255, 255)
+Okay_3.TextScaled = true
+Okay_3.TextSize = 14.000
+Okay_3.TextWrapped = true
+
+UICorner_34.Parent = Okay_3
+
+TextLabel_15.Parent = Frame_5
+TextLabel_15.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_15.BackgroundTransparency = 1.000
+TextLabel_15.Position = UDim2.new(0.0147923455, 0, 0.596418142, 0)
+TextLabel_15.Size = UDim2.new(0.959961891, 0, 0.349881977, 0)
+TextLabel_15.Font = Enum.Font.FredokaOne
+TextLabel_15.Text = "If you think it was a mistake, open a ticket in our discord community!"
+TextLabel_15.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_15.TextScaled = true
+TextLabel_15.TextSize = 14.000
+TextLabel_15.TextWrapped = true
+
+TextLabel_16.Parent = Bwarn
+TextLabel_16.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_16.BackgroundTransparency = 1.000
+TextLabel_16.Position = UDim2.new(0.0200187974, 0, 0.201462671, 0)
+TextLabel_16.Size = UDim2.new(0.959961772, 0, 0.190380752, 0)
+TextLabel_16.Font = Enum.Font.FredokaOne
+TextLabel_16.Text = "You have been banned from the LDS Hub!!"
+TextLabel_16.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_16.TextScaled = true
+TextLabel_16.TextSize = 14.000
+TextLabel_16.TextWrapped = true
+
+TextLabel_17.Parent = Bwarn
+TextLabel_17.BackgroundColor3 = Color3.fromRGB(170, 0, 255)
+TextLabel_17.BackgroundTransparency = 1.000
+TextLabel_17.Position = UDim2.new(0.0175166447, 0, 0.00582630653, 0)
+TextLabel_17.Size = UDim2.new(0.959961772, 0, 0.204395592, 0)
+TextLabel_17.Font = Enum.Font.FredokaOne
+TextLabel_17.Text = "(Banned)"
+TextLabel_17.TextColor3 = Color3.fromRGB(170, 0, 255)
+TextLabel_17.TextScaled = true
+TextLabel_17.TextSize = 14.000
+TextLabel_17.TextWrapped = true
+
+HomeUi.Name = "HomeUi"
+HomeUi.Parent = Frame
+HomeUi.BackgroundColor3 = Color3.fromRGB(52, 52, 52)
+HomeUi.Position = UDim2.new(0.273959696, 0, 0.0941176489, 0)
+HomeUi.Size = UDim2.new(0.712676346, 0, 0.533351243, 0)
+
+UICorner_35.Parent = HomeUi
+
+Credits.Name = "Credits"
+Credits.Parent = HomeUi
+Credits.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Credits.BackgroundTransparency = 1.000
+Credits.Position = UDim2.new(0, 0, -0.0937468559, 0)
+Credits.Size = UDim2.new(0.252276182, 0, 0.172821864, 0)
+Credits.Font = Enum.Font.Unknown
+Credits.Text = "Credits"
+Credits.TextColor3 = Color3.fromRGB(255, 255, 255)
+Credits.TextScaled = true
+Credits.TextSize = 14.000
+Credits.TextWrapped = true
+
+YTDC.Name = "YTDC"
+YTDC.Parent = HomeUi
+YTDC.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+YTDC.BackgroundTransparency = 1.000
+YTDC.Position = UDim2.new(0.0187516958, 0, 1.03385592, 0)
+YTDC.Size = UDim2.new(0.392913878, 0, 0.142608792, 0)
+YTDC.ZIndex = 10
+YTDC.Font = Enum.Font.Unknown
+YTDC.Text = "Youtube | Discord"
+YTDC.TextColor3 = Color3.fromRGB(255, 255, 255)
+YTDC.TextScaled = true
+YTDC.TextSize = 14.000
+YTDC.TextWrapped = true
+
+TextCredits.Name = "TextCredits"
+TextCredits.Parent = HomeUi
+TextCredits.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextCredits.BackgroundTransparency = 1.000
+TextCredits.Position = UDim2.new(0.0187516958, 0, 0.121319458, 0)
+TextCredits.Size = UDim2.new(0.962496698, 0, 0.823535323, 0)
+TextCredits.Font = Enum.Font.FredokaOne
+TextCredits.Text = "Well if you're seeing this, then everything worked out, and I'm very happy about it, I want to give my credit to my friend Ali, who helped me A LOT with doubts regarding the scripts, this is the first HUB I created so wait for many others coming soon :3"
+TextCredits.TextColor3 = Color3.fromRGB(170, 0, 255)
+TextCredits.TextScaled = true
+TextCredits.TextSize = 14.000
+TextCredits.TextWrapped = true
+
+Frame_6.Parent = HomeUi
+Frame_6.BackgroundColor3 = Color3.fromRGB(51, 51, 51)
+Frame_6.Position = UDim2.new(0, 0, 1.09561825, 0)
+Frame_6.Size = UDim2.new(0.999999881, 0, 0.548003972, 0)
+Frame_6.ZIndex = 0
+
+UICorner_36.Parent = Frame_6
+
+ImageLabelYT.Name = "ImageLabelYT"
+ImageLabelYT.Parent = Frame_6
+ImageLabelYT.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+ImageLabelYT.Position = UDim2.new(0.0187516958, 0, 0.158772826, 0)
+ImageLabelYT.Size = UDim2.new(0.15151006, 0, 0.654089928, 0)
+ImageLabelYT.Image = "rbxassetid://12772776120"
+
+UICorner_37.CornerRadius = UDim.new(0, 99999999)
+UICorner_37.Parent = ImageLabelYT
+
+NameChannel.Name = "NameChannel"
+NameChannel.Parent = Frame_6
+NameChannel.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+NameChannel.BackgroundTransparency = 1.000
+NameChannel.Position = UDim2.new(0.119542062, 0, 0.218616888, 0)
+NameChannel.Size = UDim2.new(0.392913878, 0, 0.362135291, 0)
+NameChannel.ZIndex = 10
+NameChannel.Font = Enum.Font.SciFi
+NameChannel.Text = "Sr. LDS"
+NameChannel.TextColor3 = Color3.fromRGB(255, 255, 255)
+NameChannel.TextScaled = true
+NameChannel.TextSize = 14.000
+NameChannel.TextWrapped = true
+
+NameChannel_2.Name = "NameChannel"
+NameChannel_2.Parent = Frame_6
+NameChannel_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+NameChannel_2.BackgroundTransparency = 1.000
+NameChannel_2.Position = UDim2.new(0.168765277, 0, 0.532225609, 0)
+NameChannel_2.Size = UDim2.new(0.292123526, 0, 0.201496333, 0)
+NameChannel_2.ZIndex = 10
+NameChannel_2.Font = Enum.Font.SciFi
+NameChannel_2.Text = "@Sr_LDS"
+NameChannel_2.TextColor3 = Color3.fromRGB(255, 255, 255)
+NameChannel_2.TextScaled = true
+NameChannel_2.TextSize = 14.000
+NameChannel_2.TextWrapped = true
+
+ImageLabelDC.Name = "ImageLabelDC"
+ImageLabelDC.Parent = Frame_6
+ImageLabelDC.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+ImageLabelDC.Position = UDim2.new(0.489888072, 0, 0.158772826, 0)
+ImageLabelDC.Size = UDim2.new(0.15151006, 0, 0.654089928, 0)
+ImageLabelDC.Image = "http://www.roblox.com/asset/?id=1999278264"
+
+UICorner_38.CornerRadius = UDim.new(0, 99999999)
+UICorner_38.Parent = ImageLabelDC
+
+NameDC.Name = "NameDC"
+NameDC.Parent = Frame_6
+NameDC.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+NameDC.BackgroundTransparency = 1.000
+NameDC.Position = UDim2.new(0.658653319, 0, 0.239524141, 0)
+NameDC.Size = UDim2.new(0.322595239, 0, 0.504140854, 0)
+NameDC.ZIndex = 10
+NameDC.Font = Enum.Font.SciFi
+NameDC.Text = "https://discord.gg/srlds"
+NameDC.TextColor3 = Color3.fromRGB(255, 255, 255)
+NameDC.TextScaled = true
+NameDC.TextSize = 14.000
+NameDC.TextWrapped = true
+
+TextButtonDC.Name = "TextButtonDC"
+TextButtonDC.Parent = Frame_6
+TextButtonDC.BackgroundColor3 = Color3.fromRGB(126, 126, 126)
+TextButtonDC.Position = UDim2.new(0.658653319, 0, 0.773568153, 0)
+TextButtonDC.Size = UDim2.new(0.322595119, 0, 0.149138987, 0)
+TextButtonDC.Font = Enum.Font.SciFi
+TextButtonDC.Text = "Click here for copy"
+TextButtonDC.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextButtonDC.TextSize = 14.000
+
+UICorner_39.Parent = TextButtonDC
+
+TextButtonYT.Name = "TextButtonYT"
+TextButtonYT.Parent = Frame_6
+TextButtonYT.BackgroundColor3 = Color3.fromRGB(126, 126, 126)
+TextButtonYT.Position = UDim2.new(0.154701471, 0, 0.773568153, 0)
+TextButtonYT.Size = UDim2.new(0.322595119, 0, 0.149138987, 0)
+TextButtonYT.Font = Enum.Font.SciFi
+TextButtonYT.Text = "Click here for copy"
+TextButtonYT.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextButtonYT.TextSize = 14.000
+
+UICorner_40.Parent = TextButtonYT
+
+UpdateNoteUi.Name = "UpdateNoteUi"
+UpdateNoteUi.Parent = Frame
+UpdateNoteUi.BackgroundColor3 = Color3.fromRGB(52, 52, 52)
+UpdateNoteUi.Position = UDim2.new(0.273959816, 0, 0.0941176489, 0)
+UpdateNoteUi.Size = UDim2.new(0.712676346, 0, 0.862762988, 0)
+UpdateNoteUi.Visible = false
+
+UICorner_41.Parent = UpdateNoteUi
+
+UpdatesTXT.Name = "UpdatesTXT"
+UpdatesTXT.Parent = UpdateNoteUi
+UpdatesTXT.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+UpdatesTXT.BackgroundTransparency = 1.000
+UpdatesTXT.Position = UDim2.new(0, 0, -0.0937468559, 0)
+UpdatesTXT.Size = UDim2.new(0.252276182, 0, 0.172821864, 0)
+UpdatesTXT.Font = Enum.Font.Unknown
+UpdatesTXT.Text = "Updates"
+UpdatesTXT.TextColor3 = Color3.fromRGB(255, 255, 255)
+UpdatesTXT.TextScaled = true
+UpdatesTXT.TextSize = 14.000
+UpdatesTXT.TextWrapped = true
+
+UpdatesVTXT.Name = "UpdatesVTXT"
+UpdatesVTXT.Parent = UpdateNoteUi
+UpdatesVTXT.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+UpdatesVTXT.BackgroundTransparency = 1.000
+UpdatesVTXT.Position = UDim2.new(0.646483421, 0, -0.0937468037, 0)
+UpdatesVTXT.Size = UDim2.new(0.352941394, 0, 0.172821864, 0)
+UpdatesVTXT.Font = Enum.Font.Unknown
+UpdatesVTXT.Text = "v. 1.0 Realised!"
+UpdatesVTXT.TextColor3 = Color3.fromRGB(255, 255, 255)
+UpdatesVTXT.TextScaled = true
+UpdatesVTXT.TextSize = 14.000
+UpdatesVTXT.TextWrapped = true
+
+TextUpdates.Name = "TextUpdates"
+TextUpdates.Parent = UpdateNoteUi
+TextUpdates.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextUpdates.BackgroundTransparency = 1.000
+TextUpdates.Position = UDim2.new(0.0117075462, 0, 0.0579533465, 0)
+TextUpdates.Size = UDim2.new(0.972014546, 0, 0.940480709, 0)
+TextUpdates.Font = Enum.Font.FredokaOne
+TextUpdates.Text = "We have updated the LDS Hub to a global format, this will make it much easier to create new hubs and script them, not to mention that the lags will decrease much more!, We have carried out the Beta of the LDS Hub for the game Build a Boat for Treasures, for the premium/boosters, we have added ban models in case we break any rules!, We have fixed the LDS Hub for Car Crushers 2, and we are now working to bring our hub support to the game Murder Mystery 2!! good game everyone!"
+TextUpdates.TextColor3 = Color3.fromRGB(170, 170, 255)
+TextUpdates.TextScaled = true
+TextUpdates.TextSize = 14.000
+TextUpdates.TextWrapped = true
+
+MenuH.Name = "MenuH"
+MenuH.Parent = global
+MenuH.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+MenuH.BackgroundTransparency = 1.000
+MenuH.BorderColor3 = Color3.fromRGB(0, 0, 0)
+MenuH.BorderSizePixel = 0
+MenuH.Position = UDim2.new(0.0840958133, 0, 0.0547368452, 0)
+MenuH.Size = UDim2.new(0.139146566, 0, 0.0599999987, 0)
+MenuH.ZIndex = 10000
+
+TextButton.Parent = MenuH
+TextButton.BackgroundColor3 = Color3.fromRGB(51, 51, 51)
+TextButton.BackgroundTransparency = 0.300
+TextButton.BorderColor3 = Color3.fromRGB(49, 49, 49)
+TextButton.BorderSizePixel = 0
+TextButton.Position = UDim2.new(0.0399999991, 0, 0.0526313782, 0)
+TextButton.Size = UDim2.new(0, 33, 0, 33)
+TextButton.Font = Enum.Font.FredokaOne
+TextButton.Text = "-"
+TextButton.TextColor3 = Color3.fromRGB(170, 0, 255)
+TextButton.TextScaled = true
+TextButton.TextSize = 44.000
+TextButton.TextStrokeTransparency = 0.000
+TextButton.TextWrapped = true
+TextButton.TextYAlignment = Enum.TextYAlignment.Top
+
+UICorner_42.Parent = TextButton
+
+TextLabel_18.Parent = TextButton
+TextLabel_18.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_18.BackgroundTransparency = 1.000
+TextLabel_18.BorderColor3 = Color3.fromRGB(0, 0, 0)
+TextLabel_18.BorderSizePixel = 0
+TextLabel_18.Position = UDim2.new(1.20000017, 0, -0.0109091094, 0)
+TextLabel_18.Size = UDim2.new(0, 149, 0, 33)
+TextLabel_18.Font = Enum.Font.FredokaOne
+TextLabel_18.Text = "Hide LDS hub!"
+TextLabel_18.TextColor3 = Color3.fromRGB(170, 0, 255)
+TextLabel_18.TextScaled = true
+TextLabel_18.TextSize = 14.000
+TextLabel_18.TextStrokeTransparency = 0.000
+TextLabel_18.TextWrapped = true
+
+-- Script
+
+local menusCount = 0
+local menusFrame = GButtons
+local afkActive = false
+local G = getgenv()
+G.Settings = {
+
+};
+
+-- Menu Creation
+
+local function createMenuFrame(name)
+	local MenuFrame = Instance.new("Frame")
+	local UICorner = Instance.new("UICorner")
+	local MenuTitle = Instance.new("TextLabel")
+	local ScrollingFrame = Instance.new("ScrollingFrame")
+	local UIListLayout = Instance.new("UIListLayout")
+	local HelpFrame = Instance.new("Frame")
+	local UICorner_2 = Instance.new("UICorner")
+	local HelpText = Instance.new("TextLabel")
+
+	--Properties:
+
+	MenuFrame.Name = name
+	MenuFrame.Parent = Frame
+	MenuFrame.BackgroundColor3 = Color3.fromRGB(52, 52, 52)
+	MenuFrame.Position = UDim2.new(0.273959696, 0, 0.0941176489, 0)
+	MenuFrame.Size = UDim2.new(0.707664907, 0, 0.871586502, 0)
+	MenuFrame.Visible = false
+
+	UICorner.Parent = MenuFrame
+
+	MenuTitle.Name = "MenuTitle"
+	MenuTitle.Parent = MenuFrame
+	MenuTitle.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+	MenuTitle.BackgroundTransparency = 1.000
+	MenuTitle.Position = UDim2.new(0.0234394539, 0, -0.0937467813, 0)
+	MenuTitle.Size = UDim2.new(0.934218109, 0, 0.188233122, 0)
+	MenuTitle.Font = Enum.Font.Unknown
+	MenuTitle.Text = name
+	MenuTitle.TextColor3 = Color3.fromRGB(255, 255, 255)
+	MenuTitle.TextScaled = true
+	MenuTitle.TextSize = 14.000
+	MenuTitle.TextWrapped = true
+	MenuTitle.TextXAlignment = Enum.TextXAlignment.Left
+
+	ScrollingFrame.Parent = MenuFrame
+	ScrollingFrame.Active = true
+	ScrollingFrame.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+	ScrollingFrame.BackgroundTransparency = 1.000
+	ScrollingFrame.BorderColor3 = Color3.fromRGB(0, 0, 0)
+	ScrollingFrame.BorderSizePixel = 0
+	ScrollingFrame.Position = UDim2.new(0.025253389, 0, 0.0944860876, 0)
+	ScrollingFrame.Size = UDim2.new(0.966852427, 0, 0.877616346, 0)
+
+	UIListLayout.Parent = ScrollingFrame
+	UIListLayout.SortOrder = Enum.SortOrder.LayoutOrder
+	UIListLayout.Padding = UDim.new(0, 2)
+
+	HelpFrame.Name = "HelpFrame"
+	HelpFrame.Parent = MenuFrame
+	HelpFrame.Visible = false
+	HelpFrame.BackgroundColor3 = Color3.fromRGB(27, 27, 27)
+	HelpFrame.BorderColor3 = Color3.fromRGB(0, 0, 0)
+	HelpFrame.BorderSizePixel = 0
+	HelpFrame.Position = UDim2.new(0.999321342, 0, -0.0717547983, 0)
+	HelpFrame.Size = UDim2.new(0.685455084, 0, 0.463646352, 0)
+
+	UICorner_2.Parent = HelpFrame
+
+	HelpText.Name = "HelpText"
+	HelpText.Parent = HelpFrame
+	HelpText.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+	HelpText.BackgroundTransparency = 1.000
+	HelpText.BorderColor3 = Color3.fromRGB(0, 0, 0)
+	HelpText.BorderSizePixel = 0
+	HelpText.Position = UDim2.new(0.036842104, 0, 0.0804597437, 0)
+	HelpText.Size = UDim2.new(0.931578934, 0, 0.869047642, 0)
+	HelpText.Font = Enum.Font.JosefinSans
+	HelpText.Text = "Aqui é uma ajuda para você, espero que te ajude!"
+	HelpText.TextColor3 = Color3.fromRGB(255, 255, 255)
+	HelpText.TextScaled = true
+	HelpText.TextSize = 14.000
+	HelpText.TextWrapped = true
+	return MenuFrame
+end
+
+local function createMenuButton(name)
+	-- Instances:
+
+
+	local MenuButton = Instance.new("TextButton")
+	local UICorner = Instance.new("UICorner")
+
+	--Properties:
+
+	MenuButton.Name = tostring(menusCount)..name
+	print(MenuButton.Name)
+	MenuButton.Parent = GButtons
+	MenuButton.BackgroundColor3 = Color3.fromRGB(126, 126, 126)
+	MenuButton.Position = UDim2.new(0.0382463485, 0, 0, 0)
+	MenuButton.Size = UDim2.new(0.943000019, 0, 0.0329999998, 0)
+	MenuButton.Font = Enum.Font.DenkOne
+	MenuButton.Text = name
+	MenuButton.TextColor3 = Color3.fromRGB(255, 255, 255)
+	MenuButton.TextScaled = true
+	MenuButton.TextSize = 14.000
+	MenuButton.TextWrapped = true
+
+	UICorner.Parent = MenuButton
+
+	UICorner.Parent = MenuButton
+	return MenuButton
+end
+
+local function createToggleButton(text, desc, parent)
+	local ToggleBt = Instance.new("Frame")
+	local Button = Instance.new("TextButton")
+	local UICorner = Instance.new("UICorner")
+	local ButtonMode = Instance.new("Frame")
+	local UICorner_2 = Instance.new("UICorner")
+	local ButtonTitle = Instance.new("TextLabel")
+	local DescIcon = Instance.new("ImageLabel")
+	local UICorner_3 = Instance.new("UICorner")
+
+	--Properties:
+
+	ToggleBt.Name = "ToggleBt"
+	ToggleBt.Parent = parent.ScrollingFrame
+	ToggleBt.BackgroundColor3 = Color3.fromRGB(34, 34, 34)
+	ToggleBt.BorderColor3 = Color3.fromRGB(0, 0, 0)
+	ToggleBt.BorderSizePixel = 0
+	ToggleBt.Size = UDim2.new(0.95, 0,0.075, 0)
+
+	Button.Name = "Button"
+	Button.Parent = ToggleBt
+	Button.BackgroundColor3 = Color3.fromRGB(126, 126, 126)
+	Button.Position = UDim2.new(0.0392156877, 0, 0.148148149, 0)
+	Button.Size = UDim2.new(0.176470593, 0, 0.666666687, 0)
+	Button.Font = Enum.Font.SourceSans
+	Button.Text = ""
+	Button.TextColor3 = Color3.fromRGB(0, 0, 0)
+	Button.TextSize = 14.000
+
+	UICorner.Parent = Button
+
+	ButtonMode.Name = "ButtonMode"
+	ButtonMode.Parent = Button
+	ButtonMode.BackgroundColor3 = Color3.fromRGB(255, 0, 0)
+	ButtonMode.Position = UDim2.new(0.0568263829, 0, 0.0644846261, 0)
+	ButtonMode.Size = UDim2.new(0.434782565, 0, 0.870967805, 0)
+
+	UICorner_2.Parent = ButtonMode
+
+	ButtonTitle.Name = "ButtonTitle"
+	ButtonTitle.Parent = Button
+	ButtonTitle.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+	ButtonTitle.BackgroundTransparency = 1.000
+	ButtonTitle.Position = UDim2.new(1.06473529, 0, 0, 0)
+	ButtonTitle.Size = UDim2.new(3.69565153, 0, 1, 0)
+	ButtonTitle.Font = Enum.Font.FredokaOne
+	ButtonTitle.Text = text
+	ButtonTitle.TextColor3 = Color3.fromRGB(255, 255, 255)
+	ButtonTitle.TextScaled = true
+	ButtonTitle.TextSize = 14.000
+	ButtonTitle.TextWrapped = true
+	ButtonTitle.TextXAlignment = Enum.TextXAlignment.Left
+
+	DescIcon.Name = "DescIcon"
+	DescIcon.Parent = Button
+	DescIcon.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+	DescIcon.BackgroundTransparency = 1.000
+	DescIcon.BorderColor3 = Color3.fromRGB(0, 0, 0)
+	DescIcon.BorderSizePixel = 0
+	DescIcon.Position = UDim2.new(4.75600004, 0, 0.100000001, 0)
+	DescIcon.Size = UDim2.new(0.378260583, 0, 0.888888896, 0)
+	DescIcon.Image = "rbxassetid://14592412395"
+	
+	
+
+	UICorner_3.Parent = ToggleBt
+	
+	return Button, ButtonMode, DescIcon
+end
+
+local function createScroller(Parent)
+	
+	local Scroller = Instance.new("Frame")
+	local UICorner = Instance.new("UICorner")
+	local ScrollingFrame = Instance.new("ScrollingFrame")
+	local UIListLayout = Instance.new("UIListLayout")
+	local ButtonSelected = Instance.new("Frame")
+	local UICorner_2 = Instance.new("UICorner")
+	local NameButton = Instance.new("TextLabel")
+	local Seacher = Instance.new("Frame")
+	local UICorner_3 = Instance.new("UICorner")
+	local ImageLabel = Instance.new("ImageLabel")
+	local TxtBox = Instance.new("TextBox")
+	local UICorner_4 = Instance.new("UICorner")
+
+	--Properties:
+
+	Scroller.Name = "Scroller"
+	Scroller.Parent = Parent
+	Scroller.BackgroundColor3 = Color3.fromRGB(126, 126, 126)
+	Scroller.Position = UDim2.new(0.598398924, 0, 0.249713555, 0)
+	Scroller.Size = UDim2.new(0.380356163, 0, 0.64679116, 0)
+
+	UICorner.Parent = Scroller
+
+	ScrollingFrame.Parent = Scroller
+	ScrollingFrame.Active = true
+	ScrollingFrame.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+	ScrollingFrame.BackgroundTransparency = 1.000
+	ScrollingFrame.Position = UDim2.new(0.0370299891, 0, 0.0295806173, 0)
+	ScrollingFrame.Size = UDim2.new(0.962970018, 0, 0.939115465, 0)
+	ScrollingFrame.CanvasSize = UDim2.new(0, 0, 200, 0)
+
+	UIListLayout.Parent = ScrollingFrame
+	UIListLayout.SortOrder = Enum.SortOrder.LayoutOrder
+	UIListLayout.Padding = UDim.new(9.99999975e-05, 0)
+
+	ButtonSelected.Name = "ButtonSelected"
+	ButtonSelected.Parent = Parent
+	ButtonSelected.BackgroundColor3 = Color3.fromRGB(126, 126, 126)
+	ButtonSelected.Position = UDim2.new(0.598398924, 0, 0.920627594, 0)
+	ButtonSelected.Size = UDim2.new(0.380356163, 0, 0.056865342, 0)
+
+	UICorner_2.Parent = ButtonSelected
+
+	NameButton.Name = "NameButton"
+	NameButton.Parent = ButtonSelected
+	NameButton.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+	NameButton.BackgroundTransparency = 1.000
+	NameButton.Size = UDim2.new(1, 0, 1, 0)
+	NameButton.Font = Enum.Font.FredokaOne
+	NameButton.Text = "Name Button"
+	NameButton.TextColor3 = Color3.fromRGB(170, 0, 255)
+	NameButton.TextScaled = true
+	NameButton.TextSize = 14.000
+	NameButton.TextWrapped = true
+
+	Seacher.Name = "Seacher"
+	Seacher.Parent = Parent
+	Seacher.BackgroundColor3 = Color3.fromRGB(126, 126, 126)
+	Seacher.Position = UDim2.new(0.37650618, 0, 0.0944861472, 0)
+	Seacher.Size = UDim2.new(0.602248847, 0, 0.103495322, 0)
+
+	UICorner_3.Parent = Seacher
+
+	ImageLabel.Parent = Seacher
+	ImageLabel.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+	ImageLabel.BackgroundTransparency = 1.000
+	ImageLabel.Position = UDim2.new(0.0235172249, 0, 0.0218360275, 0)
+	ImageLabel.Size = UDim2.new(0.11417561, 0, 0.945557475, 0)
+	ImageLabel.Image = "rbxassetid://12772973193"
+
+	TxtBox.Name = "TxtBox"
+	TxtBox.Parent = Seacher
+	TxtBox.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+	TxtBox.Position = UDim2.new(0.141104788, 0, 0.15225783, 0)
+	TxtBox.Size = UDim2.new(0.831458151, 0, 0.749924839, 0)
+	TxtBox.Font = Enum.Font.SourceSans
+	TxtBox.PlaceholderText = "Seacher"
+	TxtBox.Text = ""
+	TxtBox.TextColor3 = Color3.fromRGB(0, 0, 0)
+	TxtBox.TextScaled = true
+	TxtBox.TextSize = 14.000
+	TxtBox.TextWrapped = true
+
+	UICorner_4.Parent = TxtBox
+	
+	return Scroller, ButtonSelected, Seacher
+	
+end
+
+-- Menu Utilities
+
+local function offMenus()
+	for _,v in pairs(Frame:GetChildren()) do
+		if v:IsA("Frame") and v.Name ~= "Warn" and v.Name ~= "LE" then
+			v.Visible = false
+		end
+	end
+	for _,v in pairs(GButtons:GetChildren()) do
+		if v:IsA("TextButton") then
+			v.BackgroundColor3 = Color3.fromRGB(126, 126, 126)
+		end
+	end
+end
+
+local NameSave = game.Players.LocalPlayer.Name.."LDS"
+
+local function LoadSettings()
+	local HttpService = game:service('HttpService')
+
+	--use 'isfile' to check if we are reading the correct txt file
+
+	if isfile(NameSave) then
+		--use 'readfile' to read 'TUTORIAL.txt' and decode it
+		G.Settings = HttpService:JSONDecode(readfile(NameSave))
+	end
+end
+
+local function SaveSettings()
+	local JSON -- is nil
+	local HttpService = game:service('HttpService') -- used for the JSON DECODE AND ENCODE
+	--Decode
+	JSON = HttpService:JSONEncode(G.Settings)
+	--Make a text file using 'writefile'
+	writefile(NameSave,JSON)
+end
+
+-- Warns
+
+function module:ConfirmWarn(callback)
+	Warn.Visible = true
+	Dwarn.Visible = true
+	Yes.MouseButton1Click:Connect(function()
+		Warn.Visible = false
+		Dwarn.Visible = false
+		callback()
+	end)
+	No.MouseButton1Click:Connect(function()
+		Warn.Visible = false
+		Dwarn.Visible = false
+		return false
+	end)
+end
+
+function module:start(gameName, Hversion)
+	GameName.Text = gameName
+	HubVersion.Text = "v. "..Hversion
+	UpdatesVTXT.Text = "v. "..Hversion
+	global.Enabled = true
+	game.StarterGui:SetCore("SendNotification", {
+		Title = "LDS HUB";
+		Text = "By Sr LDS and Aliscreative";
+		Duration = 8;
+	})
+	local frame = global.Frame
+	frame.HomeUi.Visible = true
+	
+	-- Funções principais da gui global
+	_1Home.MouseButton1Click:Connect(function()
+		offMenus()
+		_1Home.BackgroundColor3 = Color3.fromRGB(170, 0, 255)
+		HomeUi.Visible = true
+	end)
+	_998Settings.MouseButton1Click:Connect(function()
+		offMenus()
+		_998Settings.BackgroundColor3 = Color3.fromRGB(170, 0, 255)
+		SettingsUI.Visible = true
+	end)
+	_999UpdateNotes.MouseButton1Click:Connect(function()
+		offMenus()
+		_999UpdateNotes.BackgroundColor3 = Color3.fromRGB(170, 0, 255)
+		UpdateNoteUi.Visible = true
+	end)
+		-- Créditos botões
+	TextButtonYT.MouseButton1Click:Connect(function()
+		setclipboard("https://www.youtube.com/@Sr_LDS")
+		game.StarterGui:SetCore("SendNotification", {
+			Title = "Youtube";
+			Text = "Copied! Paste in your browser!";
+			Duration = 6;
+		})
+	end)
+	TextButtonDC.MouseButton1Click:Connect(function()
+		setclipboard("https://discord.gg/srlds")
+		game.StarterGui:SetCore("SendNotification", {
+			Title = "Discord";
+			Text = "Copied! Paste in your browser!";
+			Duration = 6;
+		})
+	end)
+		-- Settings botões
+	AntAFKButton.MouseButton1Click:Connect(function()
+		afkActive = not afkActive
+		local bb=game:service('VirtualUser')
+		local afkFunc
+		if afkActive then
+			AntiAFKFrameColor.BackgroundColor3 = Color3.fromRGB(0, 255, 0)
+			afkFunc = game:service('Players').LocalPlayer.Idled:connect(function()
+				bb:CaptureController()
+				bb:ClickButton2(Vector2.new())
+			end)
+		else
+			AntiAFKFrameColor.BackgroundColor3 = Color3.fromRGB(255, 0, 0)
+			afkFunc:Disconnect()
+			afkFunc = nil
+		end
+	end)
+	
+	SaveButton.MouseButton1Click:Connect(function()
+		-- Em Desenvolvimento
+	end)
+	
+	DeleteButton.MouseButton1Click:Connect(function()
+		local function dstroy() global:Destroy() end
+		module:ConfirmWarn(dstroy)
+	end)
+	
+	-- Hide Button
+	MenuH.TextButton.MouseButton1Click:Connect(function()
+		Frame.Visible = not Frame.Visible
+	end)
+	
+	-- Creating menu options
+	local window = {}
+	
+	function window:addTab(name)
+		menusCount += 1
+		local cloneFrame = createMenuFrame(name)
+
+		local cloneBt = createMenuButton(name)
+		cloneBt.MouseButton1Click:Connect(function()
+			offMenus()
+			cloneBt.BackgroundColor3 = Color3.fromRGB(170, 0, 255)
+			cloneFrame.Visible = true
+		end)
+		
+		local tab = {}
+		
+		tab.MenuFrame = cloneFrame
+		
+		function tab:addToggle(text, description,  callback)
+			local togBt, modBt, helpIcon = createToggleButton(text, description, tab.MenuFrame)
+			local value = false
+			if description ~= nil then
+				helpIcon.MouseEnter:Connect(function()
+					cloneFrame.HelpFrame.HelpText.Text = description
+					cloneFrame.HelpFrame.Visible = true
+				end)
+				helpIcon.MouseLeave:Connect(function()
+					cloneFrame.HelpFrame.Visible = false
+				end)
+			end
+			togBt.MouseButton1Click:Connect(function()
+				value = not value
+				if value == true then
+					modBt.BackgroundColor3 = Color3.fromRGB(0, 255, 0)
+					modBt:TweenPosition(UDim2.new(0.5, 0,0.064, 0))
+				else
+					modBt.BackgroundColor3 = Color3.fromRGB(255, 0, 0)
+					modBt:TweenPosition(UDim2.new(0.057, 0,0.064, 0))
+				end
+				callback(value)
+			end)
+		end
+		
+		function tab:addToggleScroller()
+			 createToggleButton(tab.MenuFrame)
+			print("fc chamada pae")
+		end
+		
+		return tab
+		
+	end
+	
+	
+	
+	return window
+	
+end
+
+return module
