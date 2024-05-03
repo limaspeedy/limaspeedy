@@ -1,6 +1,6 @@
 local G = getgenv()
 local last = nil
-
+print(G.On, G.Timer, "Iniciando!")
 local function ACE()
 	local function containsLetters(text)
 		return text:match("[a-zA-Z]") ~= nil
@@ -33,7 +33,7 @@ local function ACE()
 				game:GetService("ReplicatedStorage").Network.ChargedHatch_Toggle:FireServer(false)
 				print("Desativando o Charge seu viado!")
 				print("Ativando o Timer de 5 minutos de farm viadin!")
-				wait(300) -- 5 minutos para farm
+				wait(G.Timer) -- 5 minutos para farm
 			end
 			last = containsLettersValue
 		end
