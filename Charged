@@ -1,0 +1,51 @@
+local G = getgenv()
+local last = nil
+
+local function ACE()
+	local function containsLetters(text)
+		return text:match("[a-zA-Z]") ~= nil
+	end
+	local TechCoins = game:GetService("Players").LocalPlayer.PlayerGui.MainLeft.Left.Currency.TechCoins
+
+	local targetFrame
+
+	local menorLayoutOrder = math.huge -- Inicialize com um valor muito grande
+	local targetFrame = nil
+
+	for _, child in ipairs(TechCoins:GetChildren()) do
+		if child:IsA("Frame") and child.LayoutOrder then
+			if child.LayoutOrder < menorLayoutOrder then
+				menorLayoutOrder = child.LayoutOrder
+				targetFrame = child
+			end
+		end
+	end
+
+	local AmountCoinText = targetFrame.Amount.Text
+	if AmountCoinText and type(AmountCoinText) == "string" then
+		local containsLettersValue = containsLetters(AmountCoinText)
+		if last ~= containsLettersValue then
+			-- Chamar o remote de acordo com a presença de letras no texto
+			if not containsLettersValue then
+				game:GetService("ReplicatedStorage").Network.ChargedHatch_Toggle:FireServer(true)
+				print("Ativando o Charge seu viado!")
+			else
+				game:GetService("ReplicatedStorage").Network.ChargedHatch_Toggle:FireServer(false)
+				print("Desativando o Charge seu viado!")
+				print("Ativando o Timer de 5 minutos de farm viadin!")
+				wait(300) -- 5 minutos para farm
+			end
+			last = containsLettersValue
+		end
+	else
+		warn("Erro: Texto do AmountCoin inválido")
+	end
+end
+
+ACE()
+while G.On do
+	wait(0.5)
+	ACE()
+end
+
+ 
