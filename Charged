@@ -1,6 +1,7 @@
 local G = getgenv()
+G.On = true
+G.Timer = 300
 local last = nil
-print(G.On, G.Timer, "Iniciando!")
 local function ACE()
 	local function containsLetters(text)
 		return text:match("[a-zA-Z]") ~= nil
